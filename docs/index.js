@@ -70,29 +70,30 @@ const displays = (function() {
   const notations = [
     N.ScientificNotation,
     N.EngineeringNotation,
-    N.LettersNotation,
+//    N.LettersNotation,
     N.StandardNotation,
-    N.EmojiNotation,
+//    N.EmojiNotation,
     N.MixedScientificNotation,
     N.MixedEngineeringNotation,
     N.LogarithmNotation,
     N.MixedLogarithmSciNotation,
-    N.BracketsNotation,
+//    N.BracketsNotation,
     N.InfinityNotation,
-    N.RomanNotation,
-    N.DotsNotation,
-    N.ZalgoNotation,
-    N.HexNotation,
-    N.ImperialNotation,
-    N.ClockNotation,
-    N.PrimeNotation,
-    N.BarNotation,
-    N.ShiNotation,
-    N.BlobsNotation,
+//    N.RomanNotation,
+//    N.DotsNotation,
+//    N.ZalgoNotation,
+//    N.HexNotation,
+//    N.ImperialNotation,
+//    N.ClockNotation,
+//    N.PrimeNotation,
+//    N.BarNotation,
+//    N.ShiNotation,
+//    N.BlobsNotation,
     N.BlindNotation,
-    N.AllNotation,
+//    N.AllNotation,
   ];
   const communityNotations = [
+    /*
     CN.GreekLettersNotation,
     CN.OmegaNotation,
     CN.OmegaShortNotation,
@@ -118,6 +119,7 @@ const displays = (function() {
     CN.FoursNotation,
     CN.BlobsTextNotation,
     CN.BlobsShortTextNotation
+    */
   ]
   let communityNotationsDisplay = communityNotations.reverse().map((n) => new NotationDisplay(n));
   inputContainer.after(communityHeaderSpan());
