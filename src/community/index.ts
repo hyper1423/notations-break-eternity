@@ -1,3 +1,4 @@
+/*
 export * from "../settings";
 export * from "../notation";
 export * from "./greek-letters";
@@ -26,3 +27,6 @@ export * from "./english";
 export * from "./fours";
 export * from "./blobs-text";
 export * from "./blobs-short-text";
+*/
+
+// The F are these???

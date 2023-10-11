@@ -1,4 +1,5 @@
-import type Decimal from "break_infinity.js";
+/*
+import type Decimal from "break_eternity.js";
 import { AbstractInfixNotation } from "./infix-abstract";
 import { toSubscript } from "../utils";
 
@@ -21,3 +22,4 @@ export class InfixEngineeringReverseNotation extends AbstractInfixNotation {
     return exp.toString(10);
   }
 }
+*/

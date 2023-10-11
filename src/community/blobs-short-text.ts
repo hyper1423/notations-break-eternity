@@ -1,5 +1,6 @@
+/*
 import { BlobsTextNotation } from "./blobs-text";
-import Decimal from "break_infinity.js";
+import Decimal from "break_eternity.js";
 
 export class BlobsShortTextNotation extends BlobsTextNotation {
   public get name(): string {
@@ -32,3 +33,4 @@ export class BlobsShortTextNotation extends BlobsTextNotation {
   }
 
 }
+*/

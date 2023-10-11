@@ -1,4 +1,5 @@
-import Decimal from "break_infinity.js";
+/*
+import Decimal from "break_eternity.js";
 import { Notation } from "../notation";
 import { formatMantissaWithExponent, formatMantissa } from "../utils";
 
@@ -34,3 +35,4 @@ export class CustomBaseNotation extends Notation {
     )(value, places, placesExponent);
   }
 }
+*/

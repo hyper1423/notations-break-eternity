@@ -1,4 +1,5 @@
-import Decimal from "break_infinity.js";
+/*
+import Decimal from "break_eternity.js";
 import { OmegaNotation } from "./omega";
 import { toSubscript } from "../utils";
 
@@ -35,3 +36,4 @@ export class OmegaShortNotation extends OmegaNotation {
     return `ω[${orderStr}](${this.formatDecimal(val)})`;
   }
 }
+*/

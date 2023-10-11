@@ -1,4 +1,5 @@
-import Decimal from "break_infinity.js";
+/*
+import Decimal from "break_eternity.js";
 import { EngineeringNotation } from "../engineering";
 import { toFixedEngineering } from "../utils";
 
@@ -209,3 +210,4 @@ export class EnglishNotation extends EngineeringNotation {
       .replace("novillion", "nonillion");
   }
 }
+*/

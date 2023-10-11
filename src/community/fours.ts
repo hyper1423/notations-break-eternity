@@ -1,5 +1,6 @@
+/*
 import { Notation } from "../notation";
-import Decimal from "break_infinity.js";
+import Decimal from "break_eternity.js";
 
 const LOG4 = Math.log10(4);
 const NUMBERS = [
@@ -138,3 +139,4 @@ export class FoursNotation extends Notation {
     }
   }
 }
+*/

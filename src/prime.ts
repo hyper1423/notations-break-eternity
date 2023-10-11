@@ -1,4 +1,5 @@
-import Decimal from "break_infinity.js";
+/*
+import Decimal from "break_eternity.js";
 import { Notation } from "./notation";
 
 // The maximum number we can reliably find all prime factors for.
@@ -178,3 +179,4 @@ export class PrimeNotation extends Notation {
     return factors.reverse();
   }
 }
+*/

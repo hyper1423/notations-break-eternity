@@ -1,4 +1,5 @@
-import Decimal from "break_infinity.js";
+/*
+import Decimal from "break_eternity.js";
 import { Notation } from "../notation";
 import { toSuperscript } from "../utils";
 
@@ -141,3 +142,4 @@ export class PrecisePrimeNotation extends Notation {
     return l;
   }
 }
+*/

@@ -1,4 +1,4 @@
-import Decimal from "break_infinity.js";
+import Decimal from "break_eternity.js";
 import { Settings } from "./settings.js";
 
 function commaSection(value: string, index: number): string {
@@ -118,7 +118,7 @@ export function toSuperscript(value: number): string {
 const STANDARD_ABBREVIATIONS = [
   "K", "M", "B", "T", "Qa", "Qt", "Sx", "Sp", "Oc", "No"
 ];
-
+/*
 const STANDARD_PREFIXES = [
   ["", "U", "D", "T", "Qa", "Qt", "Sx", "Sp", "O", "N"],
   ["", "Dc", "Vg", "Tg", "Qd", "Qi", "Se", "St", "Og", "Nn"],
@@ -126,20 +126,24 @@ const STANDARD_PREFIXES = [
 ];
 
 const STANDARD_PREFIXES_2 = ["", "MI-", "MC-", "NA-", "PC-", "FM-", "AT-", "ZP-"];
+*/
 
 // This is still considered high complexity, but it's a lot simpler than
 // the mess that was here before.
-export function abbreviateStandard(rawExp: number): string {
-  const exp = rawExp - 1;
+export function _BE_abbreviateStandard(rawExp: Decimal): string {
+  const exp = rawExp.minus(1);
   // This is a special case for zero exponent.
-  if (exp === -1) {
+  if (exp.eq(-1)) {
     return "";
   }
   // This is a special case for values below Dc, which have special
   // two-letter versions (e.g., Oc instead of O).
-  if (exp < STANDARD_ABBREVIATIONS.length) {
-    return STANDARD_ABBREVIATIONS[exp];
+  if (exp.lt(STANDARD_ABBREVIATIONS.length)) {
+    return STANDARD_ABBREVIATIONS[exp.toNumber()];
   }
+
+  /// Hyper: I tried to save this function but it wasn't possible due to floating point imprecision
+  /*
   const prefix = [];
   let e = exp;
   while (e > 0) {
@@ -154,6 +158,8 @@ export function abbreviateStandard(rawExp: number): string {
     abbreviation += prefix.slice(i * 3, i * 3 + 3).join("") + STANDARD_PREFIXES_2[i];
   }
   return abbreviation.replace(/-[A-Z]{2}-/g, "-").replace(/U([A-Z]{2}-)/g, "$1").replace(/-$/, "");
+  */
+  return "Error";
 }
 
 // So much of this file is a mess and I'm not sure where's best to add stuff
@@ -166,24 +172,34 @@ export function showCommas(exponent: number): boolean {
   return Settings.exponentCommas.show && exponent < Settings.exponentCommas.max;
 }
 
-export function isExponentFullyShown(exponent: number): boolean {
-  return noSpecialFormatting(exponent) || showCommas(exponent);
+//#region break_eternity.js
+export function _BE_noSpecialFormatting(exponent: Decimal): boolean {
+  return exponent.lt(Settings.exponentCommas.min);
 }
+
+export function _BE_showCommas(exponent: Decimal): boolean {
+  return Settings.exponentCommas.show && exponent.lt(Settings.exponentCommas.max);
+}
+
+export function _BE_isExponentFullyShown(exponent: Decimal): boolean {
+  return _BE_noSpecialFormatting(exponent) || _BE_showCommas(exponent);
+}
+//#endregion break_eternity.js
 
 // The whole thing where we first format the mantissa, then check if we needed to is from the edge case of
 // 9.999e99999 with a 100000 exponent threshold; formatting the mantissa rounds and pushes the exponent
 // to the threshold, meaning in some cases that the exponent will have its own exponent and that we don't
 // want to show the mantissa.
-export function formatMantissaWithExponent(mantissaFormatting: (n: number, precision: number) => string,
-exponentFormatting: (n: number, precision: number) => string, base: number, steps: number,
+export function _BE_formatMantissaWithExponent(mantissaFormatting: (n: number, precision: number) => string,
+exponentFormatting: (n: Decimal, precision: number) => string, base: number, steps: number,
 mantissaFormattingIfExponentIsFormatted?: (n: number, precision: number) => string,
 separator: string = "e", forcePositiveExponent: boolean = false):
 ((n: Decimal, precision: number, precisionExponent: number) => string) {
   return function (n: Decimal, precision: number, precisionExponent: number): string {
     const realBase = base ** steps;
-    let exponent = Math.floor(n.log(realBase)) * steps;
+    let exponent = Decimal.floor(n.log(realBase)).times(steps);
     if (forcePositiveExponent) {
-      exponent = Math.max(exponent, 0);
+      exponent = Decimal.max(exponent, 0);
     }
     let mantissa = n.div(Decimal.pow(base, exponent)).toNumber();
     // The conditional !(1 <= mantissa && mantissa < realBase)
@@ -200,22 +216,22 @@ separator: string = "e", forcePositiveExponent: boolean = false):
     if (!(1 <= mantissa && mantissa < realBase)) {
       const adjust = Math.floor(Math.log(mantissa) / Math.log(realBase));
       mantissa /= Math.pow(realBase, adjust);
-      exponent += steps * adjust;
+      exponent = exponent.add(steps * adjust);
     }
     let m = mantissaFormatting(mantissa, precision);
     if (m === mantissaFormatting(realBase, precision)) {
       m = mantissaFormatting(1, precision);
-      exponent += steps;
+      exponent = exponent.add(steps);
     }
     // This can happen in some cases with a high exponent (either due to high real base or high steps).
-    if (exponent === 0) {
+    if (exponent.eq(0)) {
       return m;
     }
     // Note that with typical exponentFormatting being this.formatExponent.bind(this),
     // this will use at least precision 2 on the exponent if relevant, due to the default
     // value of largeExponentPrecision: number = Math.max(2, precision) in formatExponent.
     const e = exponentFormatting(exponent, precisionExponent);
-    if (typeof mantissaFormattingIfExponentIsFormatted !== 'undefined' && !isExponentFullyShown(exponent)) {
+    if (typeof mantissaFormattingIfExponentIsFormatted !== 'undefined' && !_BE_isExponentFullyShown(exponent)) {
       // No need to do a second check for roll-over.
       m = mantissaFormattingIfExponentIsFormatted(mantissa, precision);
     }

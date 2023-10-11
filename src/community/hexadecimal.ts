@@ -1,3 +1,4 @@
+/*
 import { CustomBaseNotation } from "./custom-base";
 
 export class HexadecimalNotation extends CustomBaseNotation {
@@ -9,4 +10,4 @@ export class HexadecimalNotation extends CustomBaseNotation {
     return "Hexadecimal";
   }
 }
-
+*/

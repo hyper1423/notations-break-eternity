@@ -1,4 +1,5 @@
-import Decimal from "break_infinity.js";
+/*
+import Decimal from "break_eternity.js";
 import { Notation } from "./notation";
 
 const SIGNS = {
@@ -93,3 +94,4 @@ export class HexNotation extends Notation {
     return resultValue;
   }
 }
+*/

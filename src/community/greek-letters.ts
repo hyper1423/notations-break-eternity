@@ -1,4 +1,5 @@
-import Decimal from "break_infinity.js";
+/*
+import Decimal from "break_eternity.js";
 import { Notation } from "../notation";
 
 export class GreekLettersNotation extends Notation {
@@ -24,3 +25,4 @@ export class GreekLettersNotation extends Notation {
     return `${mantissa} ${suffix}`;
   }
 }
+*/

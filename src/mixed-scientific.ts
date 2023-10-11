@@ -1,7 +1,7 @@
-import type Decimal from "break_infinity.js";
+import type Decimal from "break_eternity.js";
 import { Notation } from "./notation";
 import { StandardNotation } from "./standard";
-import { formatMantissaWithExponent, formatMantissaBaseTen } from "./utils";
+import { _BE_formatMantissaWithExponent, formatMantissaBaseTen } from "./utils";
 
 const standard = new StandardNotation();
 
@@ -14,7 +14,7 @@ export class MixedScientificNotation extends Notation {
     if (value.exponent < 33) {
       return standard.formatDecimal(value, places, placesExponent);
     }
-    return formatMantissaWithExponent(formatMantissaBaseTen, this.formatExponent.bind(this),
+    return _BE_formatMantissaWithExponent(formatMantissaBaseTen, this._BE_formatExponent.bind(this),
       10, 1, (x, _) => formatMantissaBaseTen(x, 0)
     )(value, places, placesExponent);
   }

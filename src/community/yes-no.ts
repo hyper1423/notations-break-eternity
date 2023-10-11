@@ -1,4 +1,5 @@
-import type Decimal from "break_infinity.js";
+/*
+import type Decimal from "break_eternity.js";
 import { Notation } from "../notation";
 
 export class YesNoNotation extends Notation {
@@ -40,3 +41,4 @@ export class YesNoNotation extends Notation {
     return x.neq(0) ? "YES" : "NO";
   }
 }
+*/

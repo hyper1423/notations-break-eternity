@@ -1,5 +1,6 @@
-import Decimal from "break_infinity.js";
-import type { DecimalSource } from "break_infinity.js";
+/*
+import Decimal from "break_eternity.js";
+import type { DecimalSource } from "break_eternity.js";
 import { Notation } from "../notation";
 import { Settings } from "../settings";
 import { fixMantissaOverflow } from "../utils";
@@ -123,3 +124,4 @@ export abstract class AbstractInfixNotation extends Notation {
     return Math.max(places, minPlaces);
   }
 }
+*/

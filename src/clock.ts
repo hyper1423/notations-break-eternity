@@ -1,4 +1,5 @@
-import Decimal from "break_infinity.js";
+/*
+import Decimal from "break_eternity.js";
 import { Notation } from "./notation";
 
 const HOURS = ["🕛", "🕐", "🕑", "🕒", "🕓", "🕔", "🕕", "🕖", "🕗", "🕘", "🕙", "🕚"];
@@ -71,3 +72,4 @@ export class ClockNotation extends Notation {
     return HOURS[Math.max(Math.min(Math.floor(number), 11), 0)];
   }
 }
+*/

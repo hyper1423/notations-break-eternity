@@ -1,4 +1,5 @@
-import Decimal from "break_infinity.js";
+/*
+import Decimal from "break_eternity.js";
 import { Notation } from "../notation";
 
 // Prefixes to use. Each prefix is 10000 times larger than the previous one.
@@ -90,3 +91,4 @@ export class ChineseNotation extends Notation {
     }).join("") || ChineseNotDigits[0];
   }
 }
+*/

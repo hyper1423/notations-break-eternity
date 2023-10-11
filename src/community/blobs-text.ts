@@ -1,5 +1,6 @@
+/*
 import { BlobsNotation } from "../blobs";
-import Decimal from "break_infinity.js";
+import Decimal from "break_eternity.js";
 
 export class BlobsTextNotation extends BlobsNotation {
   public get name(): string {
@@ -69,3 +70,4 @@ export class BlobsTextNotation extends BlobsNotation {
     return `:${prefix}blob${suffix}:`;
   }
 }
+*/

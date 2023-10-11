@@ -1,4 +1,5 @@
-import Decimal from "break_infinity.js";
+/*
+import Decimal from "break_eternity.js";
 import { Notation } from "./notation";
 import { formatWithCommas } from "./utils";
 
@@ -50,3 +51,4 @@ export class ZalgoNotation extends Notation {
     return displayChars.join("");
   }
 }
+*/

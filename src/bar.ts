@@ -1,4 +1,5 @@
-import Decimal from "break_infinity.js";
+/*
+import Decimal from "break_eternity.js";
 import { Notation } from "./notation";
 
 // The reason these have to be these unicode boxes and not their escape characters
@@ -73,3 +74,4 @@ export class BarNotation extends Notation {
     return newParts.join("");
   }
 }
+*/

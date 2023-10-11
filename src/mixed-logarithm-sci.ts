@@ -1,4 +1,4 @@
-import Decimal from "break_infinity.js";
+import Decimal from "break_eternity.js";
 import { Notation } from "./notation";
 import { ScientificNotation } from "./scientific";
 
@@ -14,6 +14,8 @@ export class MixedLogarithmSciNotation extends Notation {
       return scientific.formatDecimal(value, places, placesExponent);
     }
     const log10 = value.log10();
-    return `e${this.formatExponent(log10, places, (n, p) => n.toFixed(p), placesExponent)}`;
+    /* Hyper start */
+    return `e${this._BE_formatExponent(log10, places, (n, p) => n.toFixed(p), placesExponent)}`;
+    /* Hyper end */
   }
 }

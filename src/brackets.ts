@@ -1,4 +1,5 @@
-import type Decimal from "break_infinity.js";
+/*
+import type Decimal from "break_eternity.js";
 import { Notation } from "./notation";
 
 export class BracketsNotation extends Notation {
@@ -26,3 +27,4 @@ export class BracketsNotation extends Notation {
     return string;
   }
 }
+*/

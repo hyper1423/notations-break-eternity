@@ -1,4 +1,5 @@
-import Decimal from "break_infinity.js";
+/*
+import Decimal from "break_eternity.js";
 import { Notation } from "./notation";
 
 // This notation works by using a font that replaces some characters with blobs
@@ -70,3 +71,4 @@ export class BlobsNotation extends Notation {
     return (Math.log10(num.log10()) - LOG3) / Math.log10(1.0002) + 1000;
   }
 }
+*/

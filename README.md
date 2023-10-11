@@ -1,7 +1,7 @@
 # Antimatter Dimensions Notations
 
-[![NPM](https://img.shields.io/npm/v/@antimatter-dimensions/notations.svg)](https://www.npmjs.com/package/@antimatter-dimensions/notations)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/0d92aa2fdf1d4921a0f74c8c0cf989f7)](https://www.codacy.com/gh/antimatter-dimensions/notations?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=antimatter-dimensions/notations&amp;utm_campaign=Badge_Grade)
+[![NPM](https://img.shields.io/npm/v/@hyper1423/notations-break-eternity.svg)](https://www.npmjs.com/package/@hyper1423/notations-break-eternity)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/0d92aa2fdf1d4921a0f74c8c0cf989f7)](https://www.codacy.com/gh/hyper1423/notations-break-eternity?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=hyper1423/notations-break-eternity&amp;utm_campaign=Badge_Grade)
 
 All the notations that are included in the current version of Antimatter Dimensions, and the upcoming Reality Update.
 
@@ -15,24 +15,24 @@ The simplest way to use this package is to include these scripts in your HTML pa
 
 ```html
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/break_infinity.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@antimatter-dimensions/notations"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@hyper1423/notations-break-eternity"></script>
 ```
 
 You can also grab specific versions here:
 
 - https://github.com/Patashu/break_infinity.js/releases
-- https://github.com/antimatter-dimensions/notations/releases
+- https://github.com/hyper1423/notations-break-eternity/releases
 
 #### npm
 
 ```
-npm install @antimatter-dimensions/notations
+npm install @hyper1423/notations-break-eternity
 ```
 
 There is no default export. The correct way to import notations is:
 
 ```js
-import * as ADNotations from "@antimatter-dimensions/notations";
+import * as ADNotations from "@hyper1423/notations-break-eternity";
 ```
 
 ## Use
@@ -112,7 +112,7 @@ looking at the source code of existing notations.
 ## Community Notations
 
 To use community notations, download community pack from the
-[releases](https://github.com/antimatter-dimensions/notations/releases) page.
+[releases](https://github.com/hyper1423/notations-break-eternity/releases) page.
 The community pack can be used **separately** from the base pack. To access
 community notations from your code, use `ADCommunityNotations` instead of
 `ADNotations`. Apart from that, the usage pattern is the same as with
@@ -132,7 +132,7 @@ be available as a community pack.
 First, clone the repo
 
 ```
-git clone https://github.com/antimatter-dimensions/notations.git
+git clone https://github.com/hyper1423/notations-break-eternity.git
 cd notations
 ```
 

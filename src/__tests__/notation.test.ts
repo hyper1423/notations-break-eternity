@@ -1,4 +1,4 @@
-import Decimal from "break_infinity.js";
+import Decimal from "break_eternity.js";
 import { Notation } from "../notation";
 
 describe("Abstract Notation", () => {

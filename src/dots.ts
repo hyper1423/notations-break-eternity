@@ -1,4 +1,5 @@
-import type Decimal from "break_infinity.js";
+/*
+import type Decimal from "break_eternity.js";
 import { Notation } from "./notation";
 
 const DOT_DIGITS =
@@ -41,3 +42,4 @@ export class DotsNotation extends Notation {
     return this.dotify(Math.floor(value / 64516)) + this.dotify(value % 64516, true);
   }
 }
+*/

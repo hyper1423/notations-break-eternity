@@ -1,4 +1,5 @@
-import Decimal from "break_infinity.js";
+/*
+import Decimal from "break_eternity.js";
 import { Notation } from "../notation";
 
 const LOG69 = Math.log(69);
@@ -36,3 +37,4 @@ export class HahaFunnyNotation extends Notation {
     return this.formatDecimal(new Decimal(value));
   }
 }
+*/

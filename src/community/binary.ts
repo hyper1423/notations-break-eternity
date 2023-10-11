@@ -1,3 +1,4 @@
+/*
 import { CustomBaseNotation } from "./custom-base";
 
 export class BinaryNotation extends CustomBaseNotation {
@@ -9,4 +10,4 @@ export class BinaryNotation extends CustomBaseNotation {
     return "Binary";
   }
 }
-
+*/

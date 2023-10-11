@@ -1,8 +1,10 @@
-import Decimal from "break_infinity.js";
+import Decimal from "break_eternity.js";
 
 // eslint-disable-next-line @typescript-eslint/naming-convention
 export const Settings = {
-  isInfinite: (decimal: Decimal): boolean => decimal.gte(Decimal.MAX_VALUE),
+  /* Hyper start */
+  isInfinite: (decimal: Decimal): boolean => decimal.gte(Decimal.dNumberMax),
+  /* Hyper end */
   exponentCommas: {
     show: true,
     min: 100000,

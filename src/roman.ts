@@ -1,4 +1,5 @@
-import Decimal from "break_infinity.js";
+/*
+import Decimal from "break_eternity.js";
 import { Notation } from "./notation";
 
 const ROMAN_NUMBERS: [number, string][] = [
@@ -77,3 +78,4 @@ export class RomanNotation extends Notation {
     return romanized;
   }
 }
+*/

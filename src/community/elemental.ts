@@ -1,4 +1,5 @@
-import Decimal from "break_infinity.js";
+/*
+import Decimal from "break_eternity.js";
 import { Notation } from "../notation";
 
 const ELEMENT_LISTS = [
@@ -87,3 +88,4 @@ export class ElementalNotation extends Notation {
     return `${formattedMantissa} × (${parts.map((x) => this.formatElementalPart(x[0], x[1])).join(" + ")})`;
   }
 }
+*/

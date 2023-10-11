@@ -1,4 +1,5 @@
-import Decimal from "break_infinity.js";
+/*
+import Decimal from "break_eternity.js";
 import { Notation } from "./notation";
 
 // eslint-disable-next-line @typescript-eslint/no-type-alias
@@ -118,7 +119,7 @@ export class ImperialNotation extends Notation {
   /**
    * Format a small quantity that is less than the smallest minim; this is done without adjective
    * @param {number} x
-   */
+   *\/
   private formatMetric(x: number): string {
     // The jump from metric to minim is sudden. Small values (< 10) get more decimal places
     // because that's usually something like sacrifice multiplier
@@ -138,7 +139,7 @@ export class ImperialNotation extends Notation {
    * @param {number} x value to be formatted
    * @param {number} volIdx index into VOLUME_UNITS for x (largest unit smaller than x)
    * @returns {string?} the formatted output, if within the capabilities of this function
-   */
+   *\/
   private checkSmallUnits(adjective: string, x: number, volIdx: number): string | undefined {
     const big = VOLUME_UNITS[volIdx];
     // Check for some minims short of a small unit break:
@@ -178,7 +179,7 @@ export class ImperialNotation extends Notation {
    * Search for the largest unit smaller than x
    * @param {number} x
    * @returns {number} index into VOLUME_UNITS
-   */
+   *\/
   private findVolumeUnit(x: number): number {
     let low = 0;
     let high = VOLUME_UNITS.length;
@@ -241,3 +242,4 @@ export class ImperialNotation extends Notation {
     return (VOWELS.has(x[0]) ? "an " : "a ") + x;
   }
 }
+*/

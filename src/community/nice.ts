@@ -1,4 +1,5 @@
-import Decimal from "break_infinity.js";
+/*
+import Decimal from "break_eternity.js";
 import { Notation } from "../notation";
 
 export class NiceNotation extends Notation {
@@ -19,3 +20,4 @@ export class NiceNotation extends Notation {
     return this.formatDecimal(new Decimal(value), places);
   }
 }
+*/

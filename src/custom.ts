@@ -1,4 +1,5 @@
-import type Decimal from "break_infinity.js";
+/*
+import type Decimal from "break_eternity.js";
 import { EngineeringNotation } from "./engineering";
 import { toEngineering } from "./utils";
 
@@ -55,3 +56,4 @@ export class CustomNotation extends EngineeringNotation {
     return letters.reverse();
   }
 }
+*/

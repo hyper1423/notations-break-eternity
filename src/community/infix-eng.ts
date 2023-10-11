@@ -1,3 +1,4 @@
+/*
 import { AbstractInfixNotation } from "./infix-abstract";
 import { toSubscript } from "../utils";
 
@@ -12,3 +13,4 @@ export class InfixEngineeringNotation extends AbstractInfixNotation {
     return toSubscript(exp);
   }
 }
+*/

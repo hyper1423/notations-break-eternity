@@ -1,4 +1,5 @@
-import Decimal from "break_infinity.js";
+/*
+import Decimal from "break_eternity.js";
 import { Notation } from "../notation";
 
 export class TritetratedNotation extends Notation {
@@ -32,3 +33,4 @@ export class TritetratedNotation extends Notation {
     return `${low.toFixed(4)}↑↑3`;
   }
 }
+*/

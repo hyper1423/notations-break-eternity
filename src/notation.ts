@@ -1,7 +1,9 @@
-import Decimal from "break_infinity.js";
-import type { DecimalSource } from "break_infinity.js";
+import Decimal from "break_eternity.js";
+import type { DecimalSource } from "break_eternity.js";
 import { Settings } from "./settings";
 import { formatWithCommas, noSpecialFormatting, showCommas } from "./utils";
+
+import { _BE_noSpecialFormatting, _BE_showCommas } from "./utils";
 
 export abstract class Notation {
   public abstract get name(): string;
@@ -17,7 +19,7 @@ export abstract class Notation {
     const decimal = Decimal.fromValue_noAlloc(value);
 
     if (decimal.exponent < -300) {
-      return decimal.sign() < 0
+      return decimal.sign < 0
         ? this.formatVerySmallNegativeDecimal(decimal.abs(), placesUnder1000)
         : this.formatVerySmallDecimal(decimal, placesUnder1000);
     }
@@ -30,10 +32,10 @@ export abstract class Notation {
     }
 
     if (Settings.isInfinite(decimal.abs())) {
-      return decimal.sign() < 0 ? this.negativeInfinite : this.infinite;
+      return decimal.sign < 0 ? this.negativeInfinite : this.infinite;
     }
 
-    return decimal.sign() < 0
+    return decimal.sign < 0
       ? this.formatNegativeDecimal(decimal.abs(), places, placesExponent)
       : this.formatDecimal(decimal, places, placesExponent);
   }
@@ -85,4 +87,22 @@ export abstract class Notation {
     }
     return this.formatDecimal(new Decimal(exponent), largeExponentPrecision, largeExponentPrecision);
   }
+
+  /* Hyper start */
+  protected _BE_formatExponent(
+    exponent: Decimal, precision: number = Settings.exponentDefaultPlaces,
+    specialFormat: (n: Decimal, p: number) => string = ((n, _) => n.toString()),
+    largeExponentPrecision: number = Math.max(2, precision)
+  ): string {
+    // This is for log notation, which wants a digit of precision on all small exponents.
+    if (_BE_noSpecialFormatting(exponent)) {
+      return specialFormat(exponent, Math.max(precision, 1));
+    }
+    if (_BE_showCommas(exponent)) {
+      // need this to use specialformat first
+      return formatWithCommas(specialFormat(exponent, 0));
+    }
+    return this.formatDecimal(new Decimal(exponent), largeExponentPrecision, largeExponentPrecision);
+  }
+  /* Hyper end */
 }

@@ -1,4 +1,5 @@
-import type Decimal from "break_infinity.js";
+/*
+import type Decimal from "break_eternity.js";
 import { Notation } from "../notation";
 import { ScientificNotation } from "../scientific";
 
@@ -36,3 +37,4 @@ export class EmojierNotation extends Notation {
     return characters.join("");
   }
 }
+*/

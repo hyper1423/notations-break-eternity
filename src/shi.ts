@@ -1,4 +1,4 @@
-import Decimal from "break_infinity.js";
+import Decimal from "break_eternity.js";
 import { Notation } from "./notation";
 
 // https://en.wikipedia.org/wiki/Lion-Eating_Poet_in_the_Stone_Den

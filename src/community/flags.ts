@@ -1,5 +1,6 @@
-/* eslint-disable no-inline-comments */
-/* eslint-disable line-comment-position */
+/*
+/* eslint-disable no-inline-comments *\/
+/* eslint-disable line-comment-position *\/
 import { CustomNotation } from "../custom";
 
 const FLAGS = [
@@ -272,3 +273,4 @@ export class FlagsNotation extends CustomNotation {
     return "Flags";
   }
 }
+*/
