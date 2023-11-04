@@ -1,6 +1,6 @@
 {
   "name": "@hyper1423/notations-break-eternity",
-  "version": "3.2.13",
+  "version": "3.2.14",
   "description": "Antimatter Dimensions notations but it can go beyond e9e15. Forked from @AntimatterDimensions/notations",
   "scripts": {
     "build": "npm run build:ad && npm run build:community",
