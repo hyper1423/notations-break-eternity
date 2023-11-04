@@ -10,7 +10,7 @@ export class MixedLogarithmSciNotation extends Notation {
   }
 
   public formatDecimal(value: Decimal, places: number, placesExponent: number): string {
-    if (value.exponent < 33) {
+    if (value.log10().lt(33)) {
       return scientific.formatDecimal(value, places, placesExponent);
     }
     const log10 = value.log10();

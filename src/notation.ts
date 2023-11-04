@@ -12,6 +12,11 @@ export abstract class Notation {
     value: DecimalSource, places: number = 0, placesUnder1000: number = 0,
     placesExponent: number = places
   ): string {
+    if (!Decimal.isFinite(value)) {
+      console.warn(new Error("NaN detected in formatting"));
+      return this.infinite;
+    }
+
     if (typeof value === "number" && !Number.isFinite(value)) {
       return this.infinite;
     }
@@ -94,6 +99,11 @@ export abstract class Notation {
     specialFormat: (n: Decimal, p: number) => string = ((n, _) => n.toString()),
     largeExponentPrecision: number = Math.max(2, precision)
   ): string {
+    if (!Decimal.isFinite(exponent)) {
+      console.warn(new Error("NaN detected in formatting"));
+      return this.infinite;
+    }
+
     // This is for log notation, which wants a digit of precision on all small exponents.
     if (_BE_noSpecialFormatting(exponent)) {
       return specialFormat(exponent, Math.max(precision, 1));

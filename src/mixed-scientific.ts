@@ -11,7 +11,7 @@ export class MixedScientificNotation extends Notation {
   }
 
   public formatDecimal(value: Decimal, places: number, placesExponent: number): string {
-    if (value.exponent < 33) {
+    if (value.log10().lt(33)) {
       return standard.formatDecimal(value, places, placesExponent);
     }
     return _BE_formatMantissaWithExponent(formatMantissaBaseTen, this._BE_formatExponent.bind(this),

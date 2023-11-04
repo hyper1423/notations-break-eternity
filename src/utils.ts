@@ -196,6 +196,10 @@ mantissaFormattingIfExponentIsFormatted?: (n: number, precision: number) => stri
 separator: string = "e", forcePositiveExponent: boolean = false):
 ((n: Decimal, precision: number, precisionExponent: number) => string) {
   return function (n: Decimal, precision: number, precisionExponent: number): string {
+    if (Decimal.isNaN(n)) {
+      throw new Error("NaN detected in formatting");
+    }
+
     const realBase = base ** steps;
     let exponent = Decimal.floor(n.log(realBase)).times(steps);
     if (forcePositiveExponent) {
